@@ -6,7 +6,7 @@
 		$apps[$x]['category'] = "Switch";
 		$apps[$x]['subcategory'] = "SIP Trunks";
 		$apps[$x]['version'] = "1.0";
-		$apps[$x]['license'] = "";
+		$apps[$x]['license'] = "BSD";
 		$apps[$x]['url'] = "http://www.fusionpbx.com";
 		$apps[$x]['description']['en-us'] = "Send calls to registered endpoint with phone number that was called.";
 		$apps[$x]['description']['es-cl'] = "";
