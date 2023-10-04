@@ -31,9 +31,9 @@
 		$apps[$x]['destinations'][$y]['field']['domain_name'] = "domain_name";
 		$apps[$x]['destinations'][$y]['field']['destination'] = "number_alias,extension";
 		$apps[$x]['destinations'][$y]['field']['description'] = "description";
-		$apps[$x]['destinations'][$y]['select_value']['user_contact'] = "sofia/internal/sip:\$1\${regex(\${sofia_contact(\${destination}@\${domain_name})}|^[^@]+(.*)|%1)}";
-		$apps[$x]['destinations'][$y]['select_value']['dialplan'] = "bridge:sofia/internal/sip:\$1\${regex(\${sofia_contact(\${destination}@\${domain_name})}|^[^@]+(.*)|%1)}";
-		$apps[$x]['destinations'][$y]['select_value']['ivr'] = "menu-exec-app:bridge sofia/internal/sip:\\$1\${regex(\${sofia_contact(\${destination}@\${domain_name})}|^[^@]+(.*)|%1)}";
+		$apps[$x]['destinations'][$y]['select_value']['user_contact'] = "sofia/internal/sip:\$1\@${regex(\${sofia_contact(\${destination}@\${domain_name})}|^[^@]*@(.*)$|%1)}";
+		$apps[$x]['destinations'][$y]['select_value']['dialplan'] = "bridge:sofia/internal/sip:\$1@\${regex(\${sofia_contact(\${destination}@\${domain_name})}|^[^@]*@(.*)$|%1)}";
+		$apps[$x]['destinations'][$y]['select_value']['ivr'] = "menu-exec-app:bridge sofia/internal/sip:\\$1@\${regex(\${sofia_contact(\${destination}@\${domain_name})}|^[^@]*@(.*)$|%1)}";
 		$apps[$x]['destinations'][$y]['select_label'] = "\${destination} \${description}";
 		$y++;
 
