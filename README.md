@@ -11,5 +11,7 @@ php /var/www/fusionpbx/core/upgrade/upgrade.php --permissions
 
 Permission
 - sip_trunk_destinations
+  - superadmin
+  - admin
 
 This will be accessible in the Destination Select list under Category SIP Trunks. You will see one for every extension.
