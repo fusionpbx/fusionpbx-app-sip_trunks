@@ -1,5 +1,6 @@
 # fusionpbx-app-sip_trunks
-Basic application to create bridge statements for registered endpoints.
+Basic application to create bridge statements for registered endpoints. The SIP trunks are used for inbound calls. It removes the extension from the contact string and passes the original number that was called. This is useful for a PBX that is registered to the extension.
+When using an ATA FXO, this may not matter if you don't need the extension number removed; in that case, you can skip the SIP Trunks feature and send calls direct to the extension
 
 Install
 ```
